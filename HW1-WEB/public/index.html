@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/crypto-news-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto-News</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body class="bg-gradient-to-b from-gray-800 via-gray-900 to-black min-h-screen">
+  <header
+    class="flex justify-between items-center bg-gradient-to-b from-gray-200 to-gray-400 p-2 shadow-md shadow-black mt-5">
+    <!-- Logo Div -->
+    <div class="flex items-center">
+      <img src="/assets/crypto-news-logo.png" alt="Website Logo" class="h-20 w-20 mr-2">
+      <span class="text-2xl font-bold font-serif">Crypto - News</span>
+    </div>
+    <!-- Top Menu Bar Div -->
+    <nav>
+      <ul class="flex space-x-8">
+        <li><a href="#" class="font-bold text-black hover:text-yellow-700">Home</a></li>
+        <li><a href="#" class="font-bold text-black hover:text-yellow-700">About</a></li>
+        <li><a href="#" class="font-bold text-black hover:text-yellow-700">Podcasts</a></li>
+        <li><a href="#" class="font-bold text-black hover:text-yellow-700 pr-6">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div
+    class="flex justify-between items-center h-10 bg-gradient-to-r from-yellow-700 via-yellow-800 via-yellow-900 via-yellow-800 to-yellow-700 mt-5 shadow-xl shadow-black">
+    <ul class="flex flex-grow justify-around items-center h-full">
+      <li class="flex-grow flex justify-center"><a href="/src/bitcoin.html"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/bitcoin-logo.webp"
+            alt="Bitcoin Logo" class="h-5 w-5 mr-2">Bitcoin</a></li>
+      <li class="flex-grow flex justify-center"><a href="#"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/ethereum-logo.png"
+            alt="Ethereum Logo" class="h-5 w-5 mr-2">Ethereum</a></li>
+      <li class="flex-grow flex justify-center"><a href="#"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/tether-logo.png"
+            alt="Tether Logo" class="h-5 w-5 mr-2">Tether</a></li>
+      <li class="flex-grow flex justify-center"><a href="#"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/bnb-logo.png"
+            alt="BNB Logo" class="h-5 w-5 mr-2">BNB</a></li>
+      <li class="flex-grow flex justify-center"><a href="#"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/solana-logo.png"
+            alt="Solana Logo" class="h-5 w-5 mr-2">Solana</a></li>
+      <li class="flex-grow flex justify-center"><a href="#"
+          class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/usdc-logo.png"
+            alt="USDC Logo" class="h-5 w-5 mr-2">USDC</a></li>
+      <li class="flex-grow flex justify-center relative">
+        <a href="#" id="dropdownToggle" class="font-bold text-black hover:text-gray-300">More Currencies ▾</a>
+        <div id="dropdown" class="dropdown-content absolute bg-white text-black shadow-lg rounded mt-2 py-2 w-48">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">XRP</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dogecoin</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cardano</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Avalanche</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">SHIBA INU</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Exchange Calculator Div -->
+  <div class="section item-center">
+    <h2 class="section-title text-white text-center">Cryptocurrency Exchange Calculator</h2>
+    <hr class="section-divider">
+  </div>
+  <div
+    class="relative bg-gradient-to-b from-gray-200 to-gray-300 p-2 shadow-md shadow-black mx-auto w-6/12 h-48 rounded">
+    <div class="flex items-center space-x-4">
+      <div class="w-1/2">
+        <label for="crypto" class="text-center block text-sm font-medium text-gray-700">Cryptocurrency</label>
+        <select id="crypto"
+          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm hover:bg-gray-100">
+          <option>Bitcoin</option>
+          <option>Ethereum</option>
+          <option>Tether</option>
+          <option>BNB</option>
+          <option>Solana</option>
+          <option>USDC</option>
+          <option>XRP</option>
+          <option>Dogecoin</option>
+          <option>Cardano</option>
+          <option>Avalanche</option>
+          <option>SHIBA INU</option>
+        </select>
+        <label for="amount" class="text-center mt-2 block text-sm font-medium text-gray-700">Amount of Coins</label>
+        <input id="amountToExchange" placeholder="Enter amount of coins to calculate" class="mt-1 w-full p-1 sm:text-sm rounded border hover:bg-gray-100"></input>
+        <button id="calculate"
+          class="mt-2 w-full py-2 px-4 shadow-black shadow-md bg-yellow-600 hover:bg-yellow-800 text-black hover:text-white font-bold rounded"
+          onclink="calculateExchange">Calculate</button>
+      </div>
+      <div class="w-1/2">
+        <label for="result" class="text-center block text-sm font-medium text-gray-700">Result in $</label>
+        <textarea id="result" type="text"
+          class="resize-none mt-1 block w-full h-20 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hot Stories Div -->
+  <div class="section item-center">
+    <h2 class="section-title text-white text-center">Hot Stories</h2>
+    <hr class="section-divider">
+  </div>
+
+  <div class="relative mt-0 bg-gradient-to-b from-gray-200 to-gray-300 p-2 shadow-md shadow-black mx-auto w-10/12 h-60">
+    <div id="newsContainer"></div>
+    <button id="prevButton"
+      class="absolute left-5 bottom-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l">Prev</button>
+    <button id="nextButton"
+      class="absolute right-5 bottom-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r">Next</button>
+  </div>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
