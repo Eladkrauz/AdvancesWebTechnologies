@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/crypto-news-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto-News</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body class="bg-gradient-to-b from-gray-800 via-gray-900 to-black min-h-screen">
+    <header
+        class="flex justify-between items-center bg-gradient-to-b from-gray-200 to-gray-400 p-2 shadow-md shadow-black mt-5">
+        <!-- Logo Div -->
+        <div class="flex items-center">
+            <img src="/assets/crypto-news-logo.png" alt="Website Logo" class="h-20 w-20 mr-2">
+            <span class="text-2xl font-bold font-serif">Bitcoin</span>
+        </div>
+        <!-- Top Menu Bar Div -->
+        <nav>
+            <ul class="flex space-x-8">
+                <li><a href="index.html" class="font-bold text-black hover:text-yellow-700">Home</a></li>
+                <li><a href="#" class="font-bold text-black hover:text-yellow-700">About</a></li>
+                <li><a href="#" class="font-bold text-black hover:text-yellow-700">Podcasts</a></li>
+                <li><a href="#" class="font-bold text-black hover:text-yellow-700 pr-6">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div
+        class="flex justify-between items-center h-10 bg-gradient-to-r from-yellow-700 via-yellow-800 via-yellow-900 via-yellow-800 to-yellow-700 mt-5 shadow-xl shadow-black">
+        <ul class="flex flex-grow justify-around items-center h-full">
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-white"><img
+                        src="/assets/bitcoin-logo.webp" alt="Bitcoin Logo" class="h-5 w-5 mr-2">Bitcoin</a></li>
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-black hover:text-gray-300"><img
+                        src="/assets/ethereum-logo.png" alt="Ethereum Logo" class="h-5 w-5 mr-2">Ethereum</a></li>
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-black hover:text-gray-300"><img
+                        src="/assets/tether-logo.png" alt="Tether Logo" class="h-5 w-5 mr-2">Tether</a></li>
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/bnb-logo.png"
+                        alt="BNB Logo" class="h-5 w-5 mr-2">BNB</a></li>
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-black hover:text-gray-300"><img
+                        src="/assets/solana-logo.png" alt="Solana Logo" class="h-5 w-5 mr-2">Solana</a></li>
+            <li class="flex-grow flex justify-center"><a href="#"
+                    class="flex items-center font-bold text-black hover:text-gray-300"><img src="/assets/usdc-logo.png"
+                        alt="USDC Logo" class="h-5 w-5 mr-2">USDC</a></li>
+            <li class="flex-grow flex justify-center relative">
+                <a href="#" id="dropdownToggle" class="font-bold text-black hover:text-gray-300">More Currencies ▾</a>
+                <div id="dropdown"
+                    class="dropdown-content absolute bg-white text-black shadow-lg rounded mt-2 py-2 w-48">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">XRP</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dogecoin</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cardano</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Avalanche</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SHIBA INU</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="relative mt-5 bg-gradient-to-b from-gray-200 to-gray-400 p-2 shadow-md shadow-black mx-auto w-10/12 h-100 rounded">
+        <div class="flex items-start">
+          <div class="w-1/4">
+            <img src="../assets/bitcoin-logo.webp" alt="Bitcoin Image" class="w-36 h-auto p-2">
+          </div>
+          <div class="w-3/4 pl-2">
+            <p class="text-black font-bold">Bitcoin (BTC), created in 2008 by the pseudonymous Satoshi Nakamoto, is the world’s first successful cryptocurrency, overcoming decades of failed digital cash experiments. Unlike traditional monetary systems controlled by trusted third parties, Bitcoin’s monetary policy is maintained through a combination of software, cryptography, and financial incentives.</p>
+            <p class="text-black mt-4">At the heart of Bitcoin is the blockchain, a cryptographically secure and verifiable database that powers the network. The Bitcoin ecosystem is supported by a global network of stakeholders, including miners who secure the network and manage the issuance of Bitcoin, traders who speculate on its value, and developers who work to integrate more people into the cryptocurrency space.</p>
+            <p class="text-black mt-4">At Cointelegraph, we document the evolving narrative of Bitcoin and the emergence of a borderless, permissionless financial system. We explore the changes since Satoshi Nakamoto's white paper, the progression of Bitcoin trading, the best investment strategies, and the impact of Bitcoin futures on blockchain adoption. We also examine how industry stakeholders are striving to make Bitcoin a staple in everyday life and the response of established financial systems to this transformative shift.</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Hot Stories Div -->
+    <div class="section item-center">
+        <h2 class="section-title text-white text-center">Bitcoin News</h2>
+        <hr class="section-divider">
+    </div>
+
+    <div
+        class="relative my-10 bg-gradient-to-b from-gray-200 to-gray-300 p-2 shadow-md shadow-black mx-auto w-10/12 h-60 rounded">
+        <div id="newsContainer"></div>
+        <button id="prevButton"
+            class="absolute left-5 bottom-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l">Prev</button>
+        <button id="nextButton"
+            class="absolute right-5 bottom-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r">Next</button>
+    </div>
+
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+
+</html>
